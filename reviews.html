@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/reviews.js" defer></script>
+  </head>
+  <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
+    <main class="flex">
+      <aside class="w-64 fixed h-screen bg-green-600 p-4 flex flex-col gap-3">
+        <p class="text-xl text-gray-950 dark:text-white font-bold">Ratings and reviews&#40;8&#41;</p>
+        <div class="flex items-center pl-3">
+          <p class="text-xl text-gray-950 dark:text-white">4.87</p>
+          <img src="assets/icons/icons8-rating-full.png" alt="" class="h-5 w-5">
+        </div>
+        <p class="text-xl text-gray-950 dark:text-white">88% Recommendation</p>
+        <button type="submit" class="px-4 py-2 bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Leave a review</button>
+        <h3 class="text-2xl my-2">Browse by</h3>
+        <ul class="flex flex-col text-xl gap-1">
+          <li><a href="">All</a></li>
+          <li><a href="">Food&#40;4&#41;</a></li>
+          <li><a href="">Ambience&#40;4&#41;</a></li>
+        </ul>
+      </aside>
+      <section class="flex-1 dark:bg-gray-800 bg-gray-300 ml-64 grid grid-cols-2">
+        <article class="border-2 bg-green-200 text-white  p-4">
+          <p id="author" class="">Jonathan</p>
+          <div id="rating" class="flex">
+            <img src="assets/icons/icons8-rating-full.png" alt="">
+            <img src="assets/icons/icons8-rating-full.png" alt="">
+            <img src="assets/icons/icons8-rating-full.png" alt="">
+            <img src="assets/icons/icons8-rating-full.png" alt="">
+            <img src="assets/icons/icons8-rating-full.png" alt="">
+          </div>
+          <blockquote id="comment" class="italic"><q>
+            What a gem! I stumbled upon Artisan Blend while exploring Nairobi, and it became my daily stop. Excellent 
+            service, a warm vibe, and honestly, better coffee than some places back home
+          </q></blockquote>
+        </article>
+      </section>
+    </main>
+</body>
+</html>
