@@ -4,7 +4,7 @@ const reviews = [
     rating: 5,
     comment: `What a gem! I stumbled upon Artisan Blend while exploring Nairobi, and it became my daily stop. Excellent 
             service, a warm vibe, and honestly, better coffee than some places back home`,
-    category: "ambience"
+    category: "food"
   },
   {
     author: "Jane",
@@ -16,14 +16,38 @@ const reviews = [
     author: "James",
     rating: 4,
     comment: `I wasn't expecting much from the vegan bowl, but it blew me away. So satisfying!`,
-    category: "ambience"
+    category: "food"
   },
   {
     author: "Annicole",
     rating: 5,
     comment: `The avocado toast was fresh and flavorful-simple, but done perfectly!`,
     category: "food"
-  }
+  },
+  {
+    author: "Rock",
+    rating: 4,
+    comment: `Warm lighting, soft jazz, and wooden decor, it feels like a cozy escape in the city.`,
+    category: "ambience"
+  },
+  {
+    author: "Brenda",
+    rating: 4,
+    comment: `Quiet enough to work, but lively enough to enjoy — the vibe strikes a perfect balance`,
+    category: "ambience"
+  },
+  {
+    author: "Finlay",
+    rating: 5,
+    comment: `The indoor plants and earthy tones create a calm, nature-inspired atmosphere.`,
+    category: "ambience"
+  },
+  {
+    author: "Ruth",
+    rating: 4,
+    comment: `Spacious seating, good natural light, and a touch of Nairobi’s urban charm. Love it!`,
+    category: "ambience"
+  },
 ];
 
 // LOAD DOM ELEMENTS
@@ -49,6 +73,40 @@ function renderReviews(){
       <blockquote class="text-xl italic"><q>${review.comment}</q></blockquote>
     `;
     reviewsContainer.appendChild(reviewCard);
+  };
+
+  // hide load more button if all available filtered reviews are shown
+  if(visibleCount >= filteredReviews.length){
+    loadMoreBtn.style.display = "none";
   }
+  else{
+    loadMoreBtn.style.display = "block";
+  }
+}
+
+//ADD 2 REVIEWS TO DISPLAY IF LOAD MORE BTN IS CLICKED
+loadMoreBtn.addEventListener('click',()=>{
+  visibleCount+=4;
+  renderReviews();
+});
+
+//LOOP TRHOUGH CATEGORIE BUTTONS , GET IT'S DATASET VALUE AND IMPLEMENT IT'S BEHAVIOR WHEN CLICKED
+for(let btn of categoryBtns){
+  btn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    selectedCategory = btn.dataset.category;
+    visibleCount = 4;
+
+    // for all category
+    if (selectedCategory === 'all'){
+      filteredReviews = [...reviews];
+    }
+    else{
+      filteredReviews = reviews.filter((review)=>{
+        return review.category === selectedCategory;
+      });
+    }
+    renderReviews();
+  });
 }
 renderReviews();

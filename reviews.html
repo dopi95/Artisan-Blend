@@ -8,24 +8,24 @@
     <script src="js/reviews.js" defer></script>
   </head>
   <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
-    <main class="flex">
-      <aside class="w-64 fixed h-screen bg-green-600 p-4 flex flex-col gap-3">
+    <main class="flex md:flex-row flex-col">
+      <aside class="md:w-64 w-full fixed md:h-screen h-auto bg-green-600 p-4 flex flex-col gap-3 left-0 top-0">
         <p class="text-xl text-gray-950 dark:text-white font-bold">Ratings and reviews&#40;8&#41;</p>
         <div class="flex items-center pl-3">
           <p class="text-xl text-gray-950 dark:text-white">4.87</p>
           <img src="assets/icons/icons8-rating-full.png" alt="" class="h-5 w-5">
         </div>
         <p class="text-xl text-gray-950 dark:text-white">88% Recommendation</p>
-        <button type="submit" class="px-4 py-2 bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Leave a review</button>
+        <button type="submit" class="md:px-4 px-2 py-2 md:text-xl text-sm bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Leave a review</button>
         <h3 class="text-2xl my-2">Browse by</h3>
-        <ul class="flex flex-col text-xl gap-1">
-          <li><a id="category_btn" href="">All</a></li>
+        <ul class="flex md:flex-col text-xl md:gap-1 gap-5">
+          <li><a id="category_btn" data-category="all" href="">All</a></li>
           <li><a id="category_btn" data-category="food" href="">Food&#40;4&#41;</a></li>
           <li><a id="category_btn" data-category="ambience" href="">Ambience&#40;4&#41;</a></li>
         </ul>
       </aside>
-      <section class="flex-1 dark:bg-gray-800 bg-gray-300 ml-64 p-6">
-        <article id="reviews_container" class="border-2 bg-green-200 text-white  p-4 grid grid-cols-2 gap-10"></article>
+      <section class="flex-1 dark:bg-gray-800 bg-gray-300 md:ml-64 md:mt-0 mt-72 p-6">
+        <article id="reviews_container" class="border-2 bg-green-200 text-white  p-4 grid md:grid-cols-2 grid-cols-1 gap-10"></article>
         <button id="load_more_btn" class="dark:bg-slate-100 bg-slate-600 px-4 py-2 dark:text-gray-950 text-white font-bold rounded-lg my-3">Load more</button>
       </section>
     </main>
