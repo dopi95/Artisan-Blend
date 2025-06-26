@@ -98,6 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//chatbot
 const chatArea = document.getElementById('chatArea');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
@@ -106,19 +107,7 @@ sendBtn.addEventListener('click', () => {
   const message = userInput.value.trim();
   if (message === '') return;
 
-  // Show user message bubble
-  const userBubble = document.createElement('div');
-  userBubble.className = 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto';
-  userBubble.textContent = message;
-  chatArea.appendChild(userBubble);
-
-  userInput.value = '';
-  chatArea.scrollTop = chatArea.scrollHeight;
-});
-sendBtn.addEventListener('click', () => {
-  const message = userInput.value.trim();
-  if (message === '') return;
-
+  // 1. Create and show user message bubble
   const userBubble = document.createElement('div');
   userBubble.className = 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto';
   userBubble.textContent = message;
@@ -126,7 +115,7 @@ sendBtn.addEventListener('click', () => {
 
   userInput.value = '';
 
-  // Bot is typing...
+  // 2. Create and show "Bot is typing..." bubble below user message
   const botTyping = document.createElement('div');
   botTyping.id = 'botTyping';
   botTyping.className = 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 p-3 rounded-lg w-max max-w-[80%] mt-2 italic animate-pulse';
@@ -135,6 +124,7 @@ sendBtn.addEventListener('click', () => {
 
   chatArea.scrollTop = chatArea.scrollHeight;
 
+  // 3. Simulate bot response
   setTimeout(() => {
     botTyping.remove();
 
