@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeaveAReview-Artisan</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/rating.js" defer></script>
-</head>
-<body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
-    <main class="">
-        <h2 class="text-2xl dark:text-white text-gray-950">Leave a review</h2>
-        <section class="border-2 border-solid rounded-lg ">
-            <div id="star_rating" class="flex gap-2"></div>
-        </section>
+  </head>
+  <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
+    <main class="p-4">
+      <h2 class="text-2xl dark:text-white text-gray-950 my-4">Leave a review</h2>
+      <section class="border-2 border-solid rounded-lg p-10 m-8 flex flex-col gap-6">
+        <h3 class="text-2xl">How would you rate us?</h3>
+        <div id="star_rating" class="flex gap-2"></div>
+        <form action="" class="max-w-3xl min-w-72 py-4">
+          <label for="name" class="dark:text-white text-gray-950 text-xl font-bold">Name:</label>
+          <input type="text" id="name" placeholder="Name" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3" required>
+          <label for="E-mail" class="dark:text-white text-gray-950 text-xl font-bold">E-mail:</label>
+          <input type="email" id="E-mail" placeholder="E-mail" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3" required>
+          <label for="review" class="dark:text-white text-gray-950 text-xl font-bold">Review:</label>
+          <textarea name="review" id="review" cols="30" rows="5" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3"></textarea>
+          <div class="grid place-content-center w-full">
+            <button type="submit" class="px-4 py-2 bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Review</button>
+          </div>
+        </form>
+      </section>
     </main>
-</body>
+  </body>
 </html>
