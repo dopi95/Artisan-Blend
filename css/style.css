@@ -937,6 +937,11 @@ video {
   border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity, 1));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1208,6 +1213,14 @@ video {
     width: 16rem;
   }
 
+  .md\:min-w-72 {
+    min-width: 18rem;
+  }
+
+  .md\:max-w-3xl {
+    max-width: 48rem;
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1270,6 +1283,10 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:border-none {
+    border-style: none;
+  }
+
   .dark\:border-white {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
