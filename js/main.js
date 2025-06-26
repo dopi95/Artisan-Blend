@@ -98,3 +98,20 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const chatArea = document.getElementById('chatArea');
+const userInput = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
+
+sendBtn.addEventListener('click', () => {
+  const message = userInput.value.trim();
+  if (message === '') return;
+
+  // Show user message bubble
+  const userBubble = document.createElement('div');
+  userBubble.className = 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto';
+  userBubble.textContent = message;
+  chatArea.appendChild(userBubble);
+
+  userInput.value = '';
+  chatArea.scrollTop = chatArea.scrollHeight;
+});
