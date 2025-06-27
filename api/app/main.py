@@ -21,5 +21,5 @@ class ChatRequest(BaseModel):
 async def chat(request: ChatRequest):
     return {
         "response": await ai.get_response(request.query),
-        "restaurant": ai.name  
+ "restaurant": ai.context["info"]["name"]
     }
