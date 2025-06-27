@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
     <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">    
+
     <script src="js/reviews.js" defer></script>
-    <script src="js/main.js" defer></script>
   </head>
   <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
 
@@ -23,21 +24,21 @@
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-6">
-          <a href="#home" class="nav-link hover:text-blue-600 transition">Home</a>
-          <a href="#our-story" class="nav-link hover:text-blue-700 transition">Our Story</a>
+          <a href="index.html" class="nav-link hover:text-blue-600 transition">Home</a>
+          <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition">Our Story</a>
           <div class="relative group">
             <button class="nav-link hover:text-blue-700 transition flex items-center">
               Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
             </button>
             <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 group-hover:opacity-100 transition duration-300">
-              <a href="#starters" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
-              <a href="#main-dishes" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Main Dishes</a>
-              <a href="#drinks" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
-              <a href="#desserts" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
+              <a href="starters.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
+              <a href="index.html#menus" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
+              <a href="drinks.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
+              <a href="desserts.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
             </div>
           </div>
                 
-          <a href="reviews.html" class="nav-link hover:text-blue-700 transition">Reviews</a>
+          <a href="#" class="nav-link hover:text-blue-700 transition">Reviews</a>
           <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
           <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition">Contact Us</a>
         </nav>
@@ -53,22 +54,22 @@
           <i class="fas fa-moon text-xl"></i>
         </button>
         <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-          <a href="#home" class="nav-link hover:text-blue-700 transition py-2">Home</a>
-          <a href="#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
+          <a href="index.html" class="nav-link hover:text-blue-700 transition py-2">Home</a>
+          <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
 
           <div class="relative">
             <button id="mobile-menu-dropdown" class="nav-link hover:text-blue-700 transition py-2 flex justify-between items-center w-full">
               Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
             </button>
             <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 space-y-2">
-              <a href="#starters" class="block py-1 hover:text-blue-700">Starters</a>
-              <a href="#main-dishes" class="block py-1 hover:text-blue-700">Main Dishes</a>
-              <a href="#drinks" class="block py-1 hover:text-blue-700">Drinks</a>
-              <a href="#desserts" class="block py-1 hover:text-blue-700">Desserts</a>
+              <a href="starters.html" class="block py-1 hover:text-blue-700">Starters</a>
+              <a href="index.html#menus" class="block py-1 hover:text-blue-700">All Menus</a>
+              <a href="drinks.html" class="block py-1 hover:text-blue-700">Drinks</a>
+              <a href="desserts.html" class="block py-1 hover:text-blue-700">Desserts</a>
             </div>
           </div>
                 
-          <a href="reviews.html" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
+          <a href="#" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
           <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
           <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition text-center">Contact Us</a>
                 
@@ -100,5 +101,74 @@
         <button id="load_more_btn" class="dark:bg-slate-100 bg-slate-600 px-4 py-2 dark:text-gray-950 text-white font-bold rounded-lg my-3 hover:opacity-85 active:scale-95">Load more</button>
       </section>
     </main>
+    <!-- Footer section -->
+    <footer  class="px-3 sm:py-10 py-8 overflow-x-hidden ml-80">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="flex flex-col items-start gap-3">
+          <!-- Navigation Links -->
+        <div class="flex flex-col gap-2">
+          <h3 class="text-xl font-semibold">Quick Links</h3>
+          <ul class="flex flex-col gap-2">
+            <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+            <li><a href="index.html#our-story" class="hover:text-blue-600">Our Story</a></li>
+            <li><a href="index.html#menus" class="hover:text-blue-600">Menu</a></li>
+            <li><a href="#" class="hover:text-blue-600">Reviews</a></li>
+            <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <div class="flex gap-2">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="">
+              <img src="assets/icons/icons8-facebook-40.png" alt=""></a>
+            <a href="https://www.x.com" target="_blank" aria-label="Twitter" class="">
+              <img src="assets/icons/icons8-twitter-40.png" alt=""></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="">
+              <img src="assets/icons/icons8-instagram-40.png" alt=""></a>
+            <a href="https://www.airbnb.com" target="_blank" aria-label="Airbnb" class="">
+              <img src="assets/icons/icons8-airbnb-40.png" alt=""></a>
+          </div>
+        </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="flex flex-col items-start gap-3">
+          <h3 class="text-xl font-semibold mb-4">Contact</h3>
+          <div class="text-sm flex gap-2 items-center">
+            <img src="assets/icons/icons8-call-40.png" alt="Tel icon"> 
+            <a href="tel:+254 728 777119">+254 728 777119</a></div>
+          <div class="text-sm flex gap-2 items-center">
+            <img src="assets/icons/icons8-email-40.png" alt="Email icon">
+            <a href="mailto:info@artisanblend.com">info@artisanblend.com</a></div>
+          <div class="text-sm flex gap-2 items-center">
+            <img src="assets/icons/icons8-location-40.png" alt="Location icon"><p>Mombasa Road, Nairobi, Kenya</p></div>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="flex flex-col gap-3 items-start">
+          <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+          <div class="flex flex-col gap-2">
+            <p class="text-sm">Mon - Fri: 8:00 AM &ndash; 9:00 PM</p>
+            <p class="text-sm">Sat - Sun: 10:00 AM &ndash; 11:00 PM</p>
+            <p class="text-sm">On 25/7-Every year we don't work!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Map Preview -->
+      <div class="mt-10">
+        <iframe class="w-full h-64 border-0 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7478907522877!2d36.84997537372774!3d-1.3272411356696567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117acdcb2ed5%3A0xb9292d5431ba196b!2sArtisan%20Blend%20Cafe!5e0!3m2!1sen!2srw!4v1750921030343!5m2!1sen!2srw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Bottom copyright -->
+      <div class="mt-8 text-center text-sm dark:text-gray-400 text-gray-950">&copy; 2025 Artisan Blend Cafe. All rights reserved.</div>
+    </footer>
+
+    <a href="chatbot.html" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300">
+  <i class="fas fa-comment-dots text-2xl"></i>
+</a>
+    <script src="js/main.js"></script>
 </body>
 </html>
