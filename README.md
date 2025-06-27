@@ -3,11 +3,11 @@
 #DirectEd Main Bootcamp - Module 1 Assessment Project 
 
   👥 Team Members 
-   Name                                Role 
-   1.Finlay Ndung'u                  UI/UX Designer
-   2.Elyas Yenealem                  Full-Stack Developer
-   3.Ishimwe Eric                    Full-Stack Developer
-   4.Sena Kebede                     Generative AI Support
+   Name and Role 
+   1.Finlay Ndung'u - UI/UX Designer
+   2.Elyas Yenealem - Full-Stack Developer
+   3.Ishimwe Eric - Full-Stack Developer
+   4.Sena Kebede - Generative AI Support
  
  📄 Project Description 
 
