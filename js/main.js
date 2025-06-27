@@ -136,3 +136,17 @@ sendBtn.addEventListener('click', () => {
     chatArea.scrollTop = chatArea.scrollHeight;
   }, 1000);
 });
+
+//view full menu
+function toggleMenu() {
+    const extraMenu = document.getElementById('extra-menu');
+    const toggleBtn = document.getElementById('toggle-btn');
+
+    extraMenu.classList.toggle('hidden');
+
+    if (extraMenu.classList.contains('hidden')) {
+      toggleBtn.textContent = 'View full menu';
+    } else {
+      toggleBtn.textContent = 'View less menu';
+    }
+  }
