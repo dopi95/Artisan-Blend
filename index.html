@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant Website</title>
+    <title>Artisan Blend</title>
     <link rel="stylesheet" href="css/style.css" />
 <<<<<<< header
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -33,10 +33,10 @@
                         Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
                     </button>
                     <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="#starters" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
-                        <a href="#main-dishes" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Main Dishes</a>
-                        <a href="#drinks" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
-                        <a href="#desserts" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
+                        <a href="#menus" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
+                        <a href="starters.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
+                        <a href="drinks.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
+                        <a href="desserts.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
                     </div>
                 </div>
                 
@@ -52,9 +52,7 @@
 
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-lg">
-                 <button class="flex items-center justify-center w-10 h-10 rounded-full  text-gray-800 transition duration-300">
-                    <i class="fas fa-moon text-xl"></i>
-                  </button>
+                 
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
                 <a href="#home" class="nav-link hover:text-blue-700 transition py-2">Home</a>
                 <a href="#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
@@ -64,10 +62,10 @@
                         Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
                     </button>
                     <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 space-y-2">
-                        <a href="#starters" class="block py-1 hover:text-blue-700">Starters</a>
-                        <a href="#main-dishes" class="block py-1 hover:text-blue-700">Main Dishes</a>
-                        <a href="#drinks" class="block py-1 hover:text-blue-700">Drinks</a>
-                        <a href="#desserts" class="block py-1 hover:text-blue-700">Desserts</a>
+                        <a href="#menus" class="block py-1 hover:text-blue-700">All Menus</a>
+                        <a href="starters.html" class="block py-1 hover:text-blue-700">Starters</a>
+                        <a href="drinks.html" class="block py-1 hover:text-blue-700">Drinks</a>
+                        <a href="desserts.html" class="block py-1 hover:text-blue-700">Desserts</a>
                     </div>
                 </div>
                 
@@ -110,9 +108,9 @@
                         <span id="typewriter-text">Artisan Blend</span>
                     </h1>
                     <p class="text-xl md:text-2xl text-white mb-8 italic">Not your average cafe.</p>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <a href="#menus" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                         Explore Our Brand
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -183,40 +181,58 @@
 
 
    <section class="px-4 py-12">
-  <h2 class="text-3xl font-bold mb-10 ml-20">Our Menu</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold mb-10 ml-20" id="menus">Our Menu</h2>
 
-    <!-- Halal Brunch -->
+  <!-- Initial Menu Items -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" id="menu-grid">
     <div class="text-center transform transition-transform duration-300 hover:scale-105">
       <img src="assets/f-1.jfif" alt="Halal Brunch" class="w-full h-64 object-cover rounded-lg shadow-md">
       <h3 class="text-xl font-semibold mt-4">Halal Brunch</h3>
-      <p class="text-gray-600 mt-2 text-sm">A flavorful combination of halal meats, fresh veggies, and house-made sauces.</p>
+      <p class=" mt-2 text-sm">A flavorful combination of halal meats, fresh veggies, and house-made sauces.</p>
     </div>
 
-    <!-- Happy Crumble -->
     <div class="text-center transform transition-transform duration-300 hover:scale-105">
       <img src="assets/f-2.jfif" alt="Happy Crumble" class="w-full h-64 object-cover rounded-lg shadow-md">
       <h3 class="text-xl font-semibold mt-4">Happy Crumble</h3>
-      <p class="text-gray-600 mt-2 text-sm">Deliciously sweet dessert topped with fresh berries and creamy crumble.</p>
+      <p class=" mt-2 text-sm">Deliciously sweet dessert topped with fresh berries and creamy crumble.</p>
     </div>
 
-    <!-- Quesadillas with Popular Badge -->
-    <div class="relative text-center transform transition-transform duration-300 hover:scale-105">
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
       <img src="assets/f-3.jfif" alt="Quesadillas" class="w-full h-64 object-cover rounded-lg shadow-md">
       <h3 class="text-xl font-semibold mt-4">Quesadillas</h3>
-      <p class="text-gray-600 mt-2 text-sm">Crispy tortilla stuffed with cheese and sides of guacamole and salsa.</p>
-      <!-- Popular Dishes Badge -->
+      <p class=" mt-2 text-sm">Crispy tortilla stuffed with cheese and sides of guacamole and salsa.</p>
     </div>
-   
   </div>
-  <div class="relative w-full">
-  <a href="#" class="absolute top-4 right-7 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
-    View full menu
-  </a>
-</div>
 
+  <!-- Extra Menu Items -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8 hidden" id="extra-menu">
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/sl-3.jfif" alt="Halal Brunch" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Berry Trench Toast</h3>
+      <p class=" mt-2 text-sm">Thick-cut French toast topped with a rich berry compote and a dusting of powdered sugar.</p>
+    </div>
+
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/bur.jfif" alt="Happy Crumble" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Artisan Burger</h3>
+      <p class="mt-2 text-sm">Juicy handcrafted beef patty layered with gourmet cheese, lettuce, tomato, 
+        and house sauce on a toasted brioche bun.</p>
+    </div>
+
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/bf.jfif" alt="Quesadillas" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Artisan Breakfast</h3>
+      <p class=" mt-2 text-sm">A wholesome breakfast platter with farm-fresh eggs, grilled tomatoes, avocado, and artisanal bread.</p>
+    </div>
+  </div>
+
+  <!-- Toggle Button -->
+  <div class="relative w-full mt-10">
+    <button onclick="toggleMenu()" class="absolute top-4 right-7 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300" id="toggle-btn">
+      View full menu
+    </button>
+  </div>
 </section>
-
 <!-- Reviews asaection -->
 <section class="py-12 px-4 md:px-8 lg:px-16">
   <h2 class="text-3xl font-bold mb-10 ml-20">Reviews</h2>

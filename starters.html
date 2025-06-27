@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Bot | Artisan Blend</title>
+    <title>Starters Menu | Artisan Blend </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
@@ -30,14 +30,14 @@
                     </button>
                     <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 group-hover:opacity-100 transition duration-300">
                        <a href="index.html#menus" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
-                        <a href="starters.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
                         <a href="drinks.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
                         <a href="desserts.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
                     </div>
                 </div>
                 
                 <a href="#" class="nav-link hover:text-blue-700 transition">Reviews</a>
-                <a href="#" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
+                <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
                 <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition">Contact Us</a>
             </nav>
             <!-- Mobile Menu Button -->
@@ -48,7 +48,9 @@
 
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-lg">
-
+                 <button class="flex items-center justify-center w-10 h-10 rounded-full  text-gray-800 transition duration-300">
+                    <i class="fas fa-moon text-xl"></i>
+                  </button>
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
                 <a href="index.html" class="nav-link hover:text-blue-700 transition py-2">Home</a>
                 <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
@@ -59,14 +61,14 @@
                     </button>
                     <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 space-y-2">
                         <a href="index.html#menus" class="block  py-1 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
-                        <a href="starters.html" class="block py-1 hover:text-blue-700">Starters</a>
+                        <a href="#" class="block py-1 hover:text-blue-700">Starters</a>
                         <a href="drinks.html" class="block py-1 hover:text-blue-700">Drinks</a>
                         <a href="desserts.html" class="block py-1 hover:text-blue-700">Desserts</a>
                     </div>
                 </div>
                 
                 <a href="#" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
-                <a href="#" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
+                <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
 
                 <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition text-center">Contact Us</a>
                 
@@ -74,43 +76,60 @@
             </div>
         </div>
     </header>
-    
-  <!-- Chatbot Section -->
-  <section class="max-w-xl mx-auto mt-32 mb-14 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700">
-    
-    <!-- Chat Area -->
-    <div id="chatArea" class="h-80 overflow-y-auto space-y-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-md text-base scroll-smooth">
-      <!-- Sample Prompt -->
-      <div class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%]">
-        What’s the most popular dish?
-      </div>
+
+    <section class="px-4 py-12 mt-10">
+  <h2 class="text-3xl font-bold mb-4 text-center" id="starters">Our Starters</h2>
+  <p class="text-center  max-w-xl mx-auto mb-10 text-sm md:text-base">
+    Begin your culinary journey with our selection of mouth-watering starters crafted to awaken your appetite.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" id="starters-grid">
+    <!-- Starter 1 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/bru.jfif" alt="Bruschetta" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Bruschetta</h3>
+      <p class=" mt-2 text-sm">Grilled bread topped with garlic, tomatoes, olive oil, and basil.</p>
     </div>
 
-    <!-- Chatbot Greeting -->
-    <p class="mt-4 text-gray-700 dark:text-gray-200 text-base flex items-center gap-2">
-      <span><strong>Chatbot:</strong> Hi! Ask any questions you have on our services below!</span>
-    </p>
-
-    <!-- Input Area -->
-    <div class="mt-4 flex items-center gap-2">
-      <input
-        id="userInput"
-        type="text"
-        placeholder="Type your message..."
-        class="flex-1 px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <button
-        id="sendBtn"
-        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
-      >
-        Send
-      </button>
+    <!-- Starter 2 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/ve.jfif" alt="Spring Rolls" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Vegetable Spring Rolls</h3>
+      <p class=" mt-2 text-sm">Crispy rolls filled with seasoned veggies, served with a tangy dip.</p>
     </div>
-  </section>
 
+    <!-- Starter 3 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/mo.jfif" alt="Mozzarella Sticks" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Mozzarella Sticks</h3>
+      <p class=" mt-2 text-sm">Golden-fried mozzarella cheese sticks with marinara sauce.</p>
+    </div>
 
-<!-- Footer section -->
-    <footer class="sm:px-6 px-3 sm:py-10 py-8 overflow-x-hidden">
+    <!-- Starter 4 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/sp.jfif" alt="Samosa" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Spiced Veggie Samosa</h3>
+      <p class="mt-2 text-sm">Crispy pastry filled with potatoes, peas, and Indian spices.</p>
+    </div>
+
+    <!-- Starter 5 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/sh.jfif" alt="Shrimp Cocktail" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Shrimp Cocktail</h3>
+      <p class=" mt-2 text-sm">Chilled shrimp served with classic cocktail sauce and lemon wedges.</p>
+    </div>
+
+    <!-- Starter 6 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/stu.jpg" alt="Stuffed Mushrooms" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Stuffed Mushrooms</h3>
+      <p class=" mt-2 text-sm">Mushroom caps filled with cheese, herbs, and breadcrumbs.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer section -->
+    <footer  class="px-3 sm:py-10 py-8 overflow-x-hidden ">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <div class="flex flex-col items-start gap-3">
@@ -145,13 +164,13 @@
         <div class="flex flex-col items-start gap-3">
           <h3 class="text-xl font-semibold mb-4">Contact</h3>
           <div class="text-sm flex gap-2 items-center">
-            <img src="assets/icons8-call-40.png" alt="Tel icon"> 
+            <img src="assets/icons/icons8-call-40.png" alt="Tel icon"> 
             <a href="tel:+254 728 777119">+254 728 777119</a></div>
           <div class="text-sm flex gap-2 items-center">
-            <img src="assets/icons8-email-40.png" alt="Email icon">
+            <img src="assets/icons/icons8-email-40.png" alt="Email icon">
             <a href="mailto:info@artisanblend.com">info@artisanblend.com</a></div>
           <div class="text-sm flex gap-2 items-center">
-            <img src="assets/icons8-location-40.png" alt="Location icon"><p>Mombasa Road, Nairobi, Kenya</p></div>
+            <img src="assets/icons/icons8-location-40.png" alt="Location icon"><p>Mombasa Road, Nairobi, Kenya</p></div>
         </div>
 
         <!-- Business Hours -->
@@ -173,6 +192,10 @@
       <!-- Bottom copyright -->
       <div class="mt-8 text-center text-sm dark:text-gray-400 text-gray-950">&copy; 2025 Artisan Blend Cafe. All rights reserved.</div>
     </footer>
+
+<a href="chatbot.html" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300">
+  <i class="fas fa-comment-dots text-2xl"></i>
+</a>
     <script src="js/main.js"></script>
 </body>
 </html>
