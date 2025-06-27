@@ -70,6 +70,9 @@ function renderReviews(){
     reviewCard.className = "bg-inherit border-2 border-solid border-gray-600 rounded-lg p-4 min-h-52";
     reviewCard.innerHTML = `
       <h3 class="text-white text-2xl font-bold">${review.author}</h3>
+      <div class="flex items-center justify-start">
+          <img src="./assets/icons/5star-rate.png" alt="5 start rating" class="h-12 w-auto">
+      </div>
       <blockquote class="text-xl italic"><q>${review.comment}</q></blockquote>
     `;
     reviewsContainer.appendChild(reviewCard);
