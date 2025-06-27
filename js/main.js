@@ -9,19 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
             ? '<i class="fas fa-bars text-xl"></i>' 
             : '<i class="fas fa-times text-xl"></i>';
     });
+// Mobile submenu toggle
+const mobileDropdownBtn = document.getElementById('mobile-menu-dropdown');
+const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
 
-    // Mobile menu dropdown toggle
-    const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
-    const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
-    
-    mobileMenuDropdown.addEventListener('click', function() {
-        mobileDropdownContent.classList.toggle('hidden');
-        const icon = mobileMenuDropdown.querySelector('i');
-        icon.classList.toggle('fa-chevron-down');
-        icon.classList.toggle('fa-chevron-up');
-    });
-
-    
+mobileDropdownBtn.addEventListener('click', function () {
+    mobileDropdownContent.classList.toggle('hidden');
+});
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -98,6 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 //chatbot
 const chatArea = document.getElementById('chatArea');
 const userInput = document.getElementById('userInput');
@@ -151,4 +146,4 @@ function toggleMenu() {
     }
   }
 
-//see more
+
