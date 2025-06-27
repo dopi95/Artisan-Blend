@@ -1,0 +1,39 @@
+{
+  "name": "Taste of Napoli",
+  "location": "Bole, Addis Ababa, Ethiopia",
+  "hours": "Monday to Sunday, 11AM to 10PM",
+  "phone": "(+251) 911-123-456",
+  "website": "https://tasteofnapoli.com",
+  "booking": {
+    "method": "You can book a table by calling or using the website.",
+    "phone": "(+251) 911-123-456",
+    "online": "https://tasteofnapoli.com/reservations"
+  },
+  "parking": "Free parking is available on site.",
+  "contact": {
+    "phone": "(+251) 911-123-456",
+    "email": "contact@tasteofnapoli.com",
+    "social": {
+      "instagram": "@tasteofnapoli",
+      "facebook": "fb.com/tasteofnapoli"
+    }
+  },
+  "dietary_options": [
+    "Vegetarian options available",
+    "Vegan-friendly dishes available",
+    "Gluten-free pasta available on request"
+  ],
+  "promotions": "10% off lunch combos from Monday to Friday",
+  "services": [
+    "Dine-in",
+    "Takeout",
+    "Delivery (via website)",
+    "Outdoor seating"
+  ],
+  "signature_dishes": [
+    "Truffle Pasta",
+    "Margherita Pizza",
+    "Tiramisu",
+    "Chicken Alfredo"
+  ]
+}
