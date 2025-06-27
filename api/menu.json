@@ -1,0 +1,128 @@
+{
+  "starters": [
+    {
+      "name": "Caprese Salad",
+      "price": "120 ETB",
+      "signature": true,
+      "dietary": ["vegetarian", "gluten-free", "nut-free"]
+    },
+    {
+      "name": "Stuffed Mushrooms",
+      "price": "130 ETB",
+      "signature": false,
+      "dietary": ["vegetarian"]
+    },
+    {
+      "name": "Garlic Bread",
+      "price": "80 ETB",
+      "signature": false,
+      "dietary": ["vegetarian", "nut-free"]
+    }
+  ],
+  "main_courses": [
+    {
+      "name": "Truffle Pasta",
+      "price": "350 ETB",
+      "signature": true,
+      "dietary": ["vegetarian", "nut-free"]
+    },
+    {
+      "name": "Margherita Pizza",
+      "price": "280 ETB",
+      "signature": true,
+      "dietary": ["vegetarian", "nut-free"]
+    },
+    {
+      "name": "Beef Lasagna",
+      "price": "340 ETB",
+      "signature": true,
+      "dietary": ["nut-free"]
+    },
+    {
+      "name": "Grilled Chicken Parmigiana",
+      "price": "360 ETB",
+      "signature": false,
+      "dietary": []
+    }
+  ],
+  "special_diet": [
+    {
+      "name": "Zucchini Noodles (Diabetic-Friendly)",
+      "price": "300 ETB",
+      "signature": false,
+      "dietary": ["diabetic-friendly", "gluten-free"]
+    },
+    {
+      "name": "Quinoa & Avocado Bowl",
+      "price": "270 ETB",
+      "signature": false,
+      "dietary": ["vegan", "gluten-free"]
+    }
+  ],
+  "desserts": [
+    {
+      "name": "Tiramisu",
+      "price": "180 ETB",
+      "signature": true,
+      "dietary": []
+    },
+    {
+      "name": "Gelato",
+      "price": "150 ETB",
+      "signature": false,
+      "dietary": ["gluten-free"]
+    }
+  ],
+  "drinks": [
+    {
+      "name": "House Wine (Red/White)",
+      "price": "150 ETB",
+      "signature": true,
+      "dietary": ["gluten-free"]
+    },
+    {
+      "name": "Espresso",
+      "price": "70 ETB",
+      "signature": false,
+      "dietary": []
+    },
+    {
+      "name": "Fresh Juice (Orange/Mango)",
+      "price": "100 ETB",
+      "signature": false,
+      "dietary": ["vegan", "gluten-free"]
+    }
+  ]
+  "signature": [
+    {
+      "name": "Caprese Salad",
+      "category": "starter",
+      "price": "120 ETB"
+    },
+    {
+      "name": "Truffle Pasta",
+      "category": "main_course",
+      "price": "350 ETB"
+    },
+    {
+      "name": "Margherita Pizza",
+      "category": "main_course",
+      "price": "280 ETB"
+    },
+    {
+      "name": "Beef Lasagna",
+      "category": "main_course",
+      "price": "340 ETB"
+    },
+    {
+      "name": "Tiramisu",
+      "category": "dessert",
+      "price": "180 ETB"
+    },
+    {
+      "name": "House Wine (Red/White)",
+      "category": "drink",
+      "price": "150 ETB"
+    }
+  ]
+}
