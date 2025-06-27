@@ -98,3 +98,51 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const chatArea = document.getElementById('chatArea');
+const userInput = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
+
+sendBtn.addEventListener('click', () => {
+  const message = userInput.value.trim();
+  if (message === '') return;
+
+  // Show user message bubble
+  const userBubble = document.createElement('div');
+  userBubble.className = 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto';
+  userBubble.textContent = message;
+  chatArea.appendChild(userBubble);
+
+  userInput.value = '';
+  chatArea.scrollTop = chatArea.scrollHeight;
+});
+sendBtn.addEventListener('click', () => {
+  const message = userInput.value.trim();
+  if (message === '') return;
+
+  const userBubble = document.createElement('div');
+  userBubble.className = 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto';
+  userBubble.textContent = message;
+  chatArea.appendChild(userBubble);
+
+  userInput.value = '';
+
+  // Bot is typing...
+  const botTyping = document.createElement('div');
+  botTyping.id = 'botTyping';
+  botTyping.className = 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 p-3 rounded-lg w-max max-w-[80%] mt-2 italic animate-pulse';
+  botTyping.textContent = 'Bot is typing...';
+  chatArea.appendChild(botTyping);
+
+  chatArea.scrollTop = chatArea.scrollHeight;
+
+  setTimeout(() => {
+    botTyping.remove();
+
+    const botBubble = document.createElement('div');
+    botBubble.className = 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 p-3 rounded-lg w-max max-w-[80%]';
+    botBubble.textContent = "Thanks for your message! We'll get back to you shortly.";
+    chatArea.appendChild(botBubble);
+
+    chatArea.scrollTop = chatArea.scrollHeight;
+  }, 1000);
+});
