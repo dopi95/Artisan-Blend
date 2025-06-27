@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeaveAReview-Artisan</title>
+    <title>Desserts | Artisan Blend </title>
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">    
-    <script src="js/rating.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="js/theme.js" defer></script>
-  </head>
-  <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
-
+</head>
+<body class= "dark:bg-gray-900 bg-white dark:text-white text-gray-950">
     <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -36,7 +34,7 @@
                        <a href="index.html#menus" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
                         <a href="starters.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
                         <a href="drinks.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
-                        <a href="desserts.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
                     </div>
                 </div>
                 
@@ -65,7 +63,7 @@
                         <a href="index.html#menus" class="block  py-1 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
                         <a href="starters.html" class="block py-1 hover:text-blue-700">Starters</a>
                         <a href="drinks.html" class="block py-1 hover:text-blue-700">Drinks</a>
-                        <a href="desserts.html" class="block py-1 hover:text-blue-700">Desserts</a>
+                        <a href="#" class="block py-1 hover:text-blue-700">Desserts</a>
                     </div>
                 </div>
                 
@@ -79,26 +77,59 @@
         </div>
     </header>
 
-    <main class="md:p-4 p-2">
-      <h2 class="text-2xl dark:text-white text-gray-950 my-4">Leave a review</h2>
-      <section class="border-2 border-solid dark:border-white border-gray-950 rounded-lg p-10 m-8 flex flex-col gap-6">
-        <h3 class="text-2xl">How would you rate us?</h3>
-        <div id="star_rating" class="flex gap-2"></div>
-        <form action="" class="md:max-w-3xl md:min-w-72 py-4">
-          <label for="name" class="dark:text-white text-gray-950 text-xl font-bold">Name:</label>
-          <input type="text" id="name" placeholder="Name" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 dark:border-none border-2 border-solid border-gray-700" required>
-          <label for="E-mail" class="dark:text-white text-gray-950 text-xl font-bold">E-mail:</label>
-          <input type="email" id="E-mail" placeholder="E-mail" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 dark:border-none border-2 border-solid border-gray-700" required>
-          <label for="review" class="dark:text-white text-gray-950 text-xl font-bold">Review:</label>
-          <textarea name="review" id="review" cols="30" rows="5" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 dark:border-none border-2 border-solid border-gray-700"></textarea>
-          <div class="grid place-content-center w-full">
-            <button type="submit" class="px-4 py-2 bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Review</button>
-          </div>
-        </form>
-      </section>
-    </main>
-    <!-- Footer section -->
-    <footer  class="px-3 sm:py-10 py-8 overflow-x-hidden ">
+  <section class="px-4 py-12 mt-10">
+  <h2 class="text-3xl font-bold mb-4 text-center" id="desserts">Our Desserts</h2>
+  <p class="text-center max-w-xl mx-auto mb-10 text-sm md:text-base">
+    Indulge in our delightful desserts, crafted to bring a perfect sweet ending to your dining experience.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" id="desserts-grid">
+    <!-- Dessert 1 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/ca.jfif" alt="Chocolate Lava Cake" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Chocolate Lava Cake</h3>
+      <p class="mt-2 text-sm">Warm chocolate cake with a gooey molten center, served with vanilla ice cream.</p>
+    </div>
+
+    <!-- Dessert 2 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/cc.jfif" alt="Cheesecake" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Classic Cheesecake</h3>
+      <p class="mt-2 text-sm">Creamy cheesecake on a graham cracker crust topped with fresh berries.</p>
+    </div>
+
+    <!-- Dessert 3 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/ft.jfif" alt="Fruit Tart" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Fruit Tart</h3>
+      <p class="mt-2 text-sm">Crisp tart shell filled with custard and topped with seasonal fresh fruits.</p>
+    </div>
+
+    <!-- Dessert 4 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/ter.jfif" alt="Tiramisu" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Tiramisu</h3>
+      <p class="mt-2 text-sm">Italian classic made with coffee-soaked ladyfingers and mascarpone cream.</p>
+    </div>
+
+    <!-- Dessert 5 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/icre.jfif" alt="Ice Cream Sundae" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Ice Cream Sundae</h3>
+      <p class="mt-2 text-sm">Scoops of ice cream with chocolate syrup, whipped cream, and a cherry on top.</p>
+    </div>
+
+    <!-- Dessert 6 -->
+    <div class="text-center transform transition-transform duration-300 hover:scale-105">
+      <img src="assets/las.jfif" alt="Brownie Delight" class="w-full h-64 object-cover rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mt-4">Brownie Delight</h3>
+      <p class="mt-2 text-sm">Fudgy brownies served warm with a drizzle of chocolate sauce.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer section -->
+    <footer  class="sm:px-6 px-3 sm:py-10 py-8 overflow-x-hidden ">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <div class="flex flex-col items-start gap-3">
@@ -165,7 +196,6 @@
 <a href="chatbot.html" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300">
   <i class="fas fa-comment-dots text-2xl"></i>
 </a>
-
     <script src="js/main.js"></script>
-  </body>
+</body>
 </html>

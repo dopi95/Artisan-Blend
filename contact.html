@@ -6,9 +6,84 @@
     <title>Contact Artisan</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/contact.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
   </head>
   <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
 
+    <!-- HEADER SECTION -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="assets/logo.png" alt="Artisan Blend Logo" class="h-10 mr-3">
+          <h1 class="text-xl font-bold">Artisan Blend</h1>
+        </div>
+        <!-- Dark Mode Icon  -->
+        <button class="grid place-content-center" id="theme_toggle">
+          <img src="assets/icons/icons8-sun-32 (1).png" alt="Sun Icon" class=" h-8" id="sun_icon">
+          <img src="assets/icons/icons8-moon-30.png" alt="Moon icon" class="hidden h-8"  id="moon_icon">
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="nav-link hover:text-blue-600 transition">Home</a>
+          <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition">Our Story</a>
+          <div class="relative group">
+            <button class="nav-link hover:text-blue-700 transition flex items-center">
+              Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 group-hover:opacity-100 transition duration-300">
+              <a href="starters.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
+              <a href="index.html#menus" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
+              <a href="drinks.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
+              <a href="desserts.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
+            </div>
+          </div>
+                
+          <a href="reviews.html" class="nav-link hover:text-blue-700 transition">Reviews</a>
+          <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
+          <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition">Contact Us</a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-lg">
+        <button class="flex items-center justify-center w-10 h-10 rounded-full  text-gray-800 transition duration-300">
+          <i class="fas fa-moon text-xl"></i>
+        </button>
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <a href="index.html" class="nav-link hover:text-blue-700 transition py-2">Home</a>
+          <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
+
+          <div class="relative">
+            <button id="mobile-menu-dropdown" class="nav-link hover:text-blue-700 transition py-2 flex justify-between items-center w-full">
+              Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            </button>
+            <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 space-y-2">
+              <a href="starters.html" class="block py-1 hover:text-blue-700">Starters</a>
+              <a href="index.html#menus" class="block py-1 hover:text-blue-700">All Menus</a>
+              <a href="drinks.html" class="block py-1 hover:text-blue-700">Drinks</a>
+              <a href="desserts.html" class="block py-1 hover:text-blue-700">Desserts</a>
+            </div>
+          </div>
+                
+          <a href="reviews.html" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
+          <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
+          <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition text-center">Contact Us</a>
+                
+               
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-col p-2 gap-5 pt-20">
+      <article class="flex gap-4 sm:flex-row flex-col">
         <div class="flex-1">
           <iframe class="w-full h-64 border-0 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7478907522877!2d36.84997537372774!3d-1.3272411356696567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117acdcb2ed5%3A0xb9292d5431ba196b!2sArtisan%20Blend%20Cafe!5e0!3m2!1sen!2srw!4v1750921030343!5m2!1sen!2srw" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -16,22 +91,22 @@
           <div class="flex flex-col gap-1">
             <h3 class="text-xl font-semibold">Our Address</h3>
             <address>
-              <p class="">Artisan Blend Cafe, <br>Mombasa Road, <br> Nairobi, Kenya.</p>
+              <p class=""><span class="text-nowrap">Artisan Blend Cafe, </span><br>Mombasa Road, <br> Nairobi, Kenya.</p>
             </address>
           </div>
           <div class="flex flex-col gap-0.5 items-start">
-            <h3 class="text-xl font-semibold">Business Hours</h3>
+            <h3 class="text-xl font-semibold text-nowrap">Business Hours</h3>
             <div class="flex flex-col gap-2">
-              <p class="text-sm">Mon - Fri: 8:00 AM &ndash; 9:00 PM</p>
-              <p class="text-sm">Sat - Sun: 10:00 AM &ndash; 11:00 PM</p>
-              <p class="text-sm">On 25/7-Every year we don't work!</p>
+              <p class="text-sm text-nowrap">Mon - Fri: 8:00 AM &ndash; 9:00 PM</p>
+              <p class="text-sm text-nowrap">Sat - Sun: 10:00 AM &ndash; 11:00 PM</p>
+              <p class="text-sm text-nowrap">On 25/7-Every year we don't work!</p>
             </div>
           </div>
         </div>
       </article>
       <article class="w-full grid place-content-center gap-3">
         <h3 id="form_title" class="text-4xl dark:text-white text-gray-950 font-bold">Contact Form</h3>
-        <form id="form" action="" class="max-w-3xl min-w-72 border-2 border-solid dark:border-white border-gray-950 p-4 rounded-lg">
+        <form id="form" action="" class="sm:max-w-3xl sm:min-w-72 max-w-sm border-2 border-solid dark:border-white border-gray-950 p-4 rounded-lg">
           <label for="name" class="dark:text-white text-gray-950 text-xl font-bold">Name:</label>
           <input type="text" id="name" placeholder="Name" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3" required>
           <label for="tel" class="dark:text-white text-gray-950 text-xl font-bold">Phone Number:</label>
@@ -52,5 +127,9 @@
       <!-- Bottom copyright -->
       <div class="text-center text-sm dark:text-gray-400 text-gray-950">&copy; 2025 Artisan Blend Cafe. All rights reserved.</div>
     </footer>
+    <a href="chatbot.html" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300">
+  <i class="fas fa-comment-dots text-2xl"></i>
+</a>
+    <script src="js/main.js"></script>
   </body>
 </html>

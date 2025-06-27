@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">    
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <script src="js/reviews.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/theme.js" defer></script>
   </head>
   <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
 
@@ -17,27 +19,27 @@
           <h1 class="text-xl font-bold">Artisan Blend</h1>
         </div>
         <!-- Dark Mode Icon  -->
-        <button class="flex items-center justify-center w-10 h-10 rounded-full  text-gray-800 transition duration-300">
-          <i class="fas fa-moon text-xl"></i>
+        <button class="grid place-content-center" id="theme_toggle">
+          <img src="assets/icons/icons8-sun-32 (1).png" alt="Sun Icon" class=" h-8" id="sun_icon">
+          <img src="assets/icons/icons8-moon-30.png" alt="Moon icon" class="hidden h-8"  id="moon_icon">
         </button>
-
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-6">
-          <a href="#home" class="nav-link hover:text-blue-600 transition">Home</a>
-          <a href="#our-story" class="nav-link hover:text-blue-700 transition">Our Story</a>
+          <a href="index.html" class="nav-link hover:text-blue-600 transition">Home</a>
+          <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition">Our Story</a>
           <div class="relative group">
             <button class="nav-link hover:text-blue-700 transition flex items-center">
               Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
             </button>
             <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 opacity-0 group-hover:opacity-100 transition duration-300">
-              <a href="#starters" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
-              <a href="#main-dishes" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Main Dishes</a>
-              <a href="#drinks" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
-              <a href="#desserts" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
+              <a href="starters.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Starters</a>
+              <a href="index.html#menus" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">All Menus</a>
+              <a href="drinks.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Drinks</a>
+              <a href="desserts.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700">Desserts</a>
             </div>
           </div>
                 
-          <a href="reviews.html" class="nav-link hover:text-blue-700 transition">Reviews</a>
+          <a href="#" class="nav-link hover:text-blue-700 transition">Reviews</a>
           <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
           <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition">Contact Us</a>
         </nav>
@@ -53,22 +55,22 @@
           <i class="fas fa-moon text-xl"></i>
         </button>
         <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-          <a href="#home" class="nav-link hover:text-blue-700 transition py-2">Home</a>
-          <a href="#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
+          <a href="index.html" class="nav-link hover:text-blue-700 transition py-2">Home</a>
+          <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
 
           <div class="relative">
             <button id="mobile-menu-dropdown" class="nav-link hover:text-blue-700 transition py-2 flex justify-between items-center w-full">
               Menu <i class="fas fa-chevron-down ml-1 text-xs"></i>
             </button>
             <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 space-y-2">
-              <a href="#starters" class="block py-1 hover:text-blue-700">Starters</a>
-              <a href="#main-dishes" class="block py-1 hover:text-blue-700">Main Dishes</a>
-              <a href="#drinks" class="block py-1 hover:text-blue-700">Drinks</a>
-              <a href="#desserts" class="block py-1 hover:text-blue-700">Desserts</a>
+              <a href="starters.html" class="block py-1 hover:text-blue-700">Starters</a>
+              <a href="index.html#menus" class="block py-1 hover:text-blue-700">All Menus</a>
+              <a href="drinks.html" class="block py-1 hover:text-blue-700">Drinks</a>
+              <a href="desserts.html" class="block py-1 hover:text-blue-700">Desserts</a>
             </div>
           </div>
                 
-          <a href="reviews.html" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
+          <a href="#" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
           <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
           <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition text-center">Contact Us</a>
                 
@@ -78,7 +80,7 @@
     </header>
 
     <main class="flex md:flex-row flex-col">
-      <aside class="md:w-64 w-full fixed md:h-screen h-auto p-4 flex flex-col gap-3 left-0 top-0 md:top-20 dark:bg-gray-950 bg-gray-300 dark:text-white text-gray-950">
+      <aside class="md:w-64 w-full fixed md:h-screen h-auto p-4 flex flex-col gap-3 left-0 top-0 md:top-20 ">
         <p class="text-xl text-gray-950 dark:text-white font-bold md:text-left text-center">Ratings and reviews&#40;8&#41;</p>
         <div class="flex items-center pl-3 w-full md:justify-start justify-center">
           <p class="text-xl text-gray-950 dark:text-white">4.87</p>
@@ -95,10 +97,15 @@
           </ul>
         </div>
       </aside>
-      <section class="flex-1 dark:bg-gray-800 bg-gray-300 md:ml-64 md:mt-10 mt-72 p-6">
-        <article id="reviews_container" class=" text-white  p-4 grid md:grid-cols-2 grid-cols-1 gap-10"></article>
-        <button id="load_more_btn" class="dark:bg-slate-100 bg-slate-600 px-4 py-2 dark:text-gray-950 text-white font-bold rounded-lg my-3 hover:opacity-85 active:scale-95">Load more</button>
+      <section class="flex-1 md:ml-64 md:mt-10 mt-72 p-6">
+        <article id="reviews_container" class=" p-4 grid md:grid-cols-2 grid-cols-1 gap-10"></article>
+        <button id="load_more_btn" class=" bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 d font-bold rounded-lg my-3 hover:opacity-85 active:scale-95">Load more</button>
       </section>
     </main>
+
+    <a href="chatbot.html" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300">
+  <i class="fas fa-comment-dots text-2xl"></i>
+</a>
+    <script src="js/main.js"></script>
 </body>
 </html>

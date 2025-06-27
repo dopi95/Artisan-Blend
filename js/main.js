@@ -1,46 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
 
-  mobileMenuButton.addEventListener("click", function () {
-    const isOpen = mobileMenu.classList.toggle("hidden");
-    mobileMenuButton.innerHTML = isOpen
-      ? '<i class="fas fa-bars text-xl"></i>'
-      : '<i class="fas fa-times text-xl"></i>';
-  });
-
-  // Mobile menu dropdown toggle
-  const mobileMenuDropdown = document.getElementById("mobile-menu-dropdown");
-  const mobileDropdownContent = document.getElementById(
-    "mobile-dropdown-content"
-  );
-
-  mobileMenuDropdown.addEventListener("click", function () {
-    mobileDropdownContent.classList.toggle("hidden");
-    const icon = mobileMenuDropdown.querySelector("i");
-    icon.classList.toggle("fa-chevron-down");
-    icon.classList.toggle("fa-chevron-up");
-  });
-
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        // Close mobile menu if open
-        if (!mobileMenu.classList.contains("hidden")) {
-          mobileMenu.classList.add("hidden");
-          mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-        }
-
-        window.scrollTo({
-          top: targetElement.offsetTop - 80, // Adjust for header height
-          behavior: "smooth",
         });
       }
     });
@@ -180,26 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       classes += " bg-red-100 text-red-800";
     }
 
-    bubble.className = classes;
-    bubble.textContent = content;
-    chatArea.appendChild(bubble);
-    chatArea.scrollTop = chatArea.scrollHeight;
-  }
 
-  sendBtn.addEventListener("click", async function () {
-    console.log("🟦 Clicked Send Button");
-    const userInput = userInputField.value.trim();
-
-    if (!userInput) {
-      console.log("⚠️ Empty input. Ignoring.");
-      userInputField.placeholder = "Please type a message...";
-      userInputField.classList.add("border-red-500");
-      setTimeout(() => {
-        userInputField.classList.remove("border-red-500");
-        userInputField.placeholder = "Type your message...";
-      }, 2000);
-      return;
-    }
 
     addMessage(userInput, "user");
     userInputField.value = "";
@@ -238,3 +177,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//view full menu
+function toggleMenu() {
+    const extraMenu = document.getElementById('extra-menu');
+    const toggleBtn = document.getElementById('toggle-btn');
+
+    extraMenu.classList.toggle('hidden');
+
+    if (extraMenu.classList.contains('hidden')) {
+      toggleBtn.textContent = 'View full menu';
+    } else {
+      toggleBtn.textContent = 'View less menu';
+    }
+  }
