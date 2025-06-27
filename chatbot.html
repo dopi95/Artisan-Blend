@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeaveAReview-Artisan</title>
+    <title>Chat Bot | Artisan Blend</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">    
-    <script src="js/rating.js" defer></script>
-  </head>
-  <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
+</head>
+<body class= "dark:bg-gray-900 bg-white dark:text-white text-gray-950">
     <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -38,7 +37,7 @@
                 </div>
                 
                 <a href="reviews.html" class="nav-link hover:text-blue-700 transition">Reviews</a>
-                <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
+                <a href="#" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
                 <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition">Contact Us</a>
             </nav>
             <!-- Mobile Menu Button -->
@@ -49,7 +48,7 @@
 
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-lg">
-                
+
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
                 <a href="index.html" class="nav-link hover:text-blue-700 transition py-2">Home</a>
                 <a href="index.html#our-story" class="nav-link hover:text-blue-700 transition py-2">Our Story</a>
@@ -67,7 +66,7 @@
                 </div>
                 
                 <a href="reviews.html" class="nav-link hover:text-blue-700 transition py-2">Reviews</a>
-                <a href="chatbot.html" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
+                <a href="#" class="nav-link hover:text-blue-700 transition py-2">Chatbot</a>
 
                 <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md border border-blue-700 transition text-center">Contact Us</a>
                 
@@ -75,27 +74,43 @@
             </div>
         </div>
     </header>
+    
+  <!-- Chatbot Section -->
+  <section class="max-w-xl mx-auto mt-32 mb-14 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700">
+    
+    <!-- Chat Area -->
+    <div id="chatArea" class="h-80 overflow-y-auto space-y-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-md text-base scroll-smooth">
+      <!-- Sample Prompt -->
+      <div class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%]">
+        What’s the most popular dish?
+      </div>
+    </div>
 
-    <main class="p-4">
-      <h2 class="text-2xl dark:text-white text-gray-950 my-4">Leave a review</h2>
-      <section class="border-2 border-solid dark:border-white border-gray-950 rounded-lg p-10 m-8 flex flex-col gap-6">
-        <h3 class="text-2xl">How would you rate us?</h3>
-        <div id="star_rating" class="flex gap-2"></div>
-        <form action="" class="md:max-w-3xl md:min-w-72 py-4">
-          <label for="name" class="dark:text-white text-gray-950 text-xl font-bold">Name:</label>
-          <input type="text" id="name" placeholder="Name" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 dark:border-none border-2 border-solid border-gray-700" required>
-          <label for="E-mail" class="dark:text-white text-gray-950 text-xl font-bold">E-mail:</label>
-          <input type="email" id="E-mail" placeholder="E-mail" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 dark:border-none border-2 border-solid border-gray-700" required>
-          <label for="review" class="dark:text-white text-gray-950 text-xl font-bold">Review:</label>
-          <textarea name="review" id="review" cols="30" rows="5" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3 dark:border-none border-2 border-solid border-gray-700"></textarea>
-          <div class="grid place-content-center w-full">
-            <button type="submit" class="px-4 py-2 bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Review</button>
-          </div>
-        </form>
-      </section>
-    </main>
-    <!-- Footer section -->
-    <footer  class="px-3 sm:py-10 py-8 overflow-x-hidden ">
+    <!-- Chatbot Greeting -->
+    <p class="mt-4 text-gray-700 dark:text-gray-200 text-base flex items-center gap-2">
+      <span><strong>Chatbot:</strong> Hi! Ask any questions you have on our services below!</span>
+    </p>
+
+    <!-- Input Area -->
+    <div class="mt-4 flex items-center gap-2">
+      <input
+        id="userInput"
+        type="text"
+        placeholder="Type your message..."
+        class="flex-1 px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <button
+        id="sendBtn"
+        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+      >
+        Send
+      </button>
+    </div>
+  </section>
+
+
+<!-- Footer section -->
+    <footer class="sm:px-6 px-3 sm:py-10 py-8 overflow-x-hidden">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <div class="flex flex-col items-start gap-3">
@@ -130,13 +145,13 @@
         <div class="flex flex-col items-start gap-3">
           <h3 class="text-xl font-semibold mb-4">Contact</h3>
           <div class="text-sm flex gap-2 items-center">
-            <img src="assets/icons/icons8-call-40.png" alt="Tel icon"> 
+            <img src="assets/icons8-call-40.png" alt="Tel icon"> 
             <a href="tel:+254 728 777119">+254 728 777119</a></div>
           <div class="text-sm flex gap-2 items-center">
-            <img src="assets/icons/icons8-email-40.png" alt="Email icon">
+            <img src="assets/icons8-email-40.png" alt="Email icon">
             <a href="mailto:info@artisanblend.com">info@artisanblend.com</a></div>
           <div class="text-sm flex gap-2 items-center">
-            <img src="assets/icons/icons8-location-40.png" alt="Location icon"><p>Mombasa Road, Nairobi, Kenya</p></div>
+            <img src="assets/icons8-location-40.png" alt="Location icon"><p>Mombasa Road, Nairobi, Kenya</p></div>
         </div>
 
         <!-- Business Hours -->
@@ -158,11 +173,6 @@
       <!-- Bottom copyright -->
       <div class="mt-8 text-center text-sm dark:text-gray-400 text-gray-950">&copy; 2025 Artisan Blend Cafe. All rights reserved.</div>
     </footer>
-
-<a href="chatbot.html" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300">
-  <i class="fas fa-comment-dots text-2xl"></i>
-</a>
-
     <script src="js/main.js"></script>
-  </body>
+</body>
 </html>
