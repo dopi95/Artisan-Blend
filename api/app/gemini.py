@@ -63,5 +63,5 @@ Keep answers friendly and under 3 sentences.
             response = await self.model.generate_content_async(prompt)
             return response.text.strip()
         except Exception as e:
-            return f"Please visit our website for more info. (Error: {str(e)})"
+            return f"Sorry, something went wrong. Please visit our website for more info."
 
