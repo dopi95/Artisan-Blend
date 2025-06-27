@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="dark:bg-gray-950 bg-white dark:text-white text-gray-950 min-h-screen box-border">
+    <main class="sm:px-6 px-3 sm:py-10 py-8 flex flex-col gap-4">
+      <article class="flex gap-3">
+        <div class="flex-1">
+          <iframe class="w-full h-64 border-0 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7478907522877!2d36.84997537372774!3d-1.3272411356696567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117acdcb2ed5%3A0xb9292d5431ba196b!2sArtisan%20Blend%20Cafe!5e0!3m2!1sen!2srw!4v1750921030343!5m2!1sen!2srw" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="flex flex-col gap-3 justify-center w-1/3 md:pl-28">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-xl font-semibold">Our Address</h3>
+            <address>
+              <p class="">Artisan Blend Cafe, <br>Mombasa Road, <br> Nairobi, Kenya.</p>
+            </address>
+          </div>
+          <div class="flex flex-col gap-0.5 items-start">
+            <h3 class="text-xl font-semibold">Business Hours</h3>
+            <div class="flex flex-col gap-2">
+              <p class="text-sm">Mon - Fri: 8:00 AM &ndash; 9:00 PM</p>
+              <p class="text-sm">Sat - Sun: 10:00 AM &ndash; 11:00 PM</p>
+              <p class="text-sm">On 25/7-Every year we don't work!</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="w-full grid place-content-center gap-3">
+        <h3 class="text-4xl dark:text-white text-gray-950 font-bold">Contact Form</h3>
+        <form action="" class="max-w-3xl min-w-72 border-2 border-solid dark:border-white border-gray-950 p-4 rounded-lg">
+          <label for="name" class="dark:text-white text-gray-950 text-xl font-bold">Name:</label>
+          <input type="text" id="name" placeholder="Name" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3" required>
+          <label for="tel" class="dark:text-white text-gray-950 text-xl font-bold">Phone Number:</label>
+          <input type="tel" id="tel" placeholder="Phone Number" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3" required>
+          <label for="E-mail" class="dark:text-white text-gray-950 text-xl font-bold">E-mail:</label>
+          <input type="email" id="E-mail" placeholder="E-mail" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3" required>
+          <label for="message" class="dark:text-white text-gray-950 text-xl font-bold">Message:</label>
+          <textarea name="message" id="message" cols="30" rows="5" class="outline-none w-full rounded-lg text-gray-950 text-xl px-2 py-2 mb-3"></textarea>
+          <div class="grid place-content-center w-full">
+            <button type="submit" class="px-4 py-2 bg-gradient-to-b from-cyan-400 to-violet-600 hover:bg-gradient-to-t text-white font-bold rounded-lg">Contact Us</button>
+          </div>
+        </form>
+      </article>
+    </main>
+    <footer class="h-16 grid place-content-center">
+      <!-- Bottom copyright -->
+      <div class="text-center text-sm dark:text-gray-400 text-gray-950">&copy; 2025 Artisan Blend Cafe. All rights reserved.</div>
+    </footer>
+  </body>
+</html>
