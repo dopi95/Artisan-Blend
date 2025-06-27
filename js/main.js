@@ -1,7 +1,40 @@
-
-        });
-      }
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', function() {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.innerHTML = isOpen 
+            ? '<i class="fas fa-bars text-xl"></i>' 
+            : '<i class="fas fa-times text-xl"></i>';
     });
+// Mobile submenu toggle
+const mobileDropdownBtn = document.getElementById('mobile-menu-dropdown');
+const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
+mobileDropdownBtn.addEventListener('click', function () {
+    mobileDropdownContent.classList.toggle('hidden');
+});
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Adjust for header height
+                    behavior: 'smooth'
+        });
+    }
   });
 });
 
@@ -138,7 +171,16 @@ document.addEventListener("DOMContentLoaded", () => {
       classes += " bg-red-100 text-red-800";
     }
 
+    bubble.className = classes;
+    bubble.textContent = content;
+    bubble.style.marginLeft = type === "user" ? "auto" : "0";
+    chatArea.appendChild(bubble);
+    chatArea.scrollTop = chatArea.scrollHeight;
+  }
 
+  sendBtn.addEventListener("click", async () => {
+    const userInput = userInputField.value.trim();
+    if (userInput === "") return;
 
     addMessage(userInput, "user");
     userInputField.value = "";
@@ -176,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sendBtn.click();
     }
   });
+    });
 });
 
 //view full menu
@@ -187,7 +230,7 @@ function toggleMenu() {
 
     if (extraMenu.classList.contains('hidden')) {
       toggleBtn.textContent = 'View full menu';
-    } else {
-      toggleBtn.textContent = 'View less menu';
-    }
+      } else {
+        toggleBtn.textContent = 'View less menu';
+      }
   }
