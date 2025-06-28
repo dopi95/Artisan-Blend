@@ -191,3 +191,23 @@ function toggleMenu() {
   dropdownButton.addEventListener('click', () => {
     dropdownContent.classList.toggle('hidden');
   });
+
+  // Close mobile menu when any main link is clicked
+  const navLinks = mobileMenu.querySelectorAll('a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      dropdownContent.classList.add('hidden'); // also hide dropdown
+    });
+  });
+
+  // Also close when submenu links are clicked
+  const dropdownLinks = dropdownContent.querySelectorAll('a');
+
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      dropdownContent.classList.add('hidden');
+      mobileMenu.classList.add('hidden');
+    });
+  });
