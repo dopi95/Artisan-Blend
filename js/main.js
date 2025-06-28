@@ -1,5 +1,4 @@
 
-
 // === Auto-Play Hero Slider ===
 let currentSlide = 0;
 const slides = document.querySelectorAll(".hero-slide");
@@ -161,8 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
   
 
 //view full menu
@@ -174,7 +171,7 @@ function toggleMenu() {
 
     if (extraMenu.classList.contains('hidden')) {
       toggleBtn.textContent = 'View full menu';
-    } else {
-      toggleBtn.textContent = 'View less menu';
-    }
+      } else {
+        toggleBtn.textContent = 'View less menu';
+      }
   }
