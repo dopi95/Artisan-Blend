@@ -1,18 +1,22 @@
 {
   "name": "Artisan-Blend",
-  "location": "Bole, Addis Ababa, Ethiopia",
-  "hours": "Monday to Sunday, 11AM to 10PM",
-  "phone": "(+251) 911-123-456",
+  "location": "Mombasa Road, Nairobi, Kenya",
+"hours": {
+  "weekdays": "8:00 AM – 9:00 PM",
+  "weekends": "10:00 AM – 11:00 PM",
+  "note": "Closed on July 25 every year"
+},
+  "phone": "+254 728 777119",
   "website": "https://artisanblend.com",
   "booking": {
     "method": "You can book a table by calling or using the website.",
-    "phone": "(+251) 911-123-456",
+    "phone": "+254 728 777119",
     "online": "https://dopi95.github.io/Artisan-Blend/reservations"
   },
   "parking": "Free parking is available on site.",
   "contact": {
-    "phone": "(+251) 911-123-456",
-    "email": "contact@artisanblend.com",
+    "phone": "(+254) 911-123-456",
+    "email": "info@artisanblend.com",
     "social": {
       "instagram": "@artisanblend",
       "facebook": "fb.com/artisanblend"
