@@ -175,3 +175,19 @@ function toggleMenu() {
         toggleBtn.textContent = 'View less menu';
       }
   }
+
+  // Toggle main mobile menu
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Toggle dropdown inside mobile menu
+  const dropdownButton = document.getElementById('mobile-menu-dropdown');
+  const dropdownContent = document.getElementById('mobile-dropdown-content');
+
+  dropdownButton.addEventListener('click', () => {
+    dropdownContent.classList.toggle('hidden');
+  });
