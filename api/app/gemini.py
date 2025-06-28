@@ -49,7 +49,7 @@ class RestaurantAI:
             menu_lines.append(f"{category.replace('_', ' ').capitalize()}:\n{formatted_items}")
 
         prompt = f"""
-You are the friendly assistant for {info['name']}, a beloved Italian restaurant located in {info['location']}.
+You are the friendly assistant for {info['name']}, a beloved brunch destination and cozy cafe located in {info['location']}.
 
 A customer asked: "{query}"
 
