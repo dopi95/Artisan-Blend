@@ -1,9 +1,4 @@
 
-        });
-      }
-    });
-  });
-});
 
 // === Auto-Play Hero Slider ===
 let currentSlide = 0;
@@ -55,60 +50,6 @@ window.addEventListener("DOMContentLoaded", () => {
   typeWriter();
 });
 
-// const chatArea = document.getElementById("chatArea");
-// const userInput = document.getElementById("userInput");
-// const sendBtn = document.getElementById("sendBtn");
-
-// sendBtn.addEventListener("click", () => {
-//   const message = userInput.value.trim();
-//   if (message === "") return;
-
-//   // Show user message bubble
-//   const userBubble = document.createElement("div");
-//   userBubble.className =
-//     "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto";
-//   userBubble.textContent = message;
-//   chatArea.appendChild(userBubble);
-
-//   userInput.value = "";
-//   chatArea.scrollTop = chatArea.scrollHeight;
-// });
-// sendBtn.addEventListener("click", () => {
-//   const message = userInput.value.trim();
-//   if (message === "") return;
-
-//   const userBubble = document.createElement("div");
-//   userBubble.className =
-//     "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-lg w-max max-w-[80%] ml-auto";
-//   userBubble.textContent = message;
-//   chatArea.appendChild(userBubble);
-
-//   userInput.value = "";
-
-//   // Bot is typing...
-//   const botTyping = document.createElement("div");
-//   botTyping.id = "botTyping";
-//   botTyping.className =
-//     "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 p-3 rounded-lg w-max max-w-[80%] mt-2 italic animate-pulse";
-//   botTyping.textContent = "Bot is typing...";
-//   chatArea.appendChild(botTyping);
-
-//   chatArea.scrollTop = chatArea.scrollHeight;
-
-//   setTimeout(() => {
-//     botTyping.remove();
-
-//     const botBubble = document.createElement("div");
-//     botBubble.className =
-//       "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 p-3 rounded-lg w-max max-w-[80%]";
-//     botBubble.textContent =
-//       "Thanks for your message! We'll get back to you shortly.";
-//     chatArea.appendChild(botBubble);
-
-//     chatArea.scrollTop = chatArea.scrollHeight;
-//   }, 1000);
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ DOM fully loaded. Event listener attached.");
 
@@ -116,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const userInputField = document.getElementById("userInput");
   const chatArea = document.getElementById("chatArea");
 
-  // More thorough null checking
   if (!sendBtn || !userInputField || !chatArea) {
     console.error("❌ Required elements missing. Check your HTML IDs:");
     console.log("- Send button exists:", !!sendBtn);
@@ -126,30 +66,68 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function addMessage(content, type) {
+    const bubbleWrapper = document.createElement("div");
+    bubbleWrapper.classList.add("flex", type === "user" ? "justify-end" : "justify-start");
+
     const bubble = document.createElement("div");
-    let classes = "p-3 rounded-lg w-max max-w-[80%] mb-2";
+    bubble.className =
+      "px-4 py-2 rounded-lg max-w-[75%] whitespace-pre-wrap";
 
     if (type === "user") {
-      classes +=
-        " bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 self-end";
+      bubble.classList.add(
+        "bg-blue-100",
+        "text-blue-800",
+        "dark:bg-blue-900",
+        "dark:text-blue-100"
+      );
     } else if (type === "bot") {
-      classes += " bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-white";
+      bubble.classList.add(
+        "bg-gray-200",
+        "text-gray-800",
+        "dark:bg-gray-700",
+        "dark:text-white"
+      );
     } else {
-      classes += " bg-red-100 text-red-800";
+      bubble.classList.add("bg-red-100", "text-red-800", "italic");
     }
 
+    bubble.textContent = content;
+    bubbleWrapper.appendChild(bubble);
+    chatArea.appendChild(bubbleWrapper);
+    chatArea.scrollTop = chatArea.scrollHeight;
+  }
 
+  sendBtn.addEventListener("click", async () => {
+    const userInput = userInputField.value.trim();
+
+    if (!userInput) {
+      userInputField.placeholder = "Please type a message...";
+      userInputField.classList.add("border-red-500");
+      setTimeout(() => {
+        userInputField.classList.remove("border-red-500");
+        userInputField.placeholder = "Type your message...";
+      }, 2000);
+      return;
+    }
 
     addMessage(userInput, "user");
     userInputField.value = "";
 
+    // Add "Bot is typing..." message
+    const typingWrapper = document.createElement("div");
+    typingWrapper.className = "flex justify-start";
+    const typingBubble = document.createElement("div");
+    typingBubble.className =
+      "px-4 py-2 rounded-lg max-w-[75%] italic text-gray-600 bg-gray-100 dark:bg-gray-800 dark:text-gray-300";
+    typingBubble.textContent = "Bot is typing...";
+    typingWrapper.appendChild(typingBubble);
+    chatArea.appendChild(typingWrapper);
+    chatArea.scrollTop = chatArea.scrollHeight;
+
     try {
-      console.log("📤 Sending POST request...");
       const response = await fetch("https://artisan-blend.onrender.com/chat", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: userInput }),
       });
 
@@ -158,7 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const data = await response.json();
-      console.log("📦 Received response:", data);
+
+      // Remove typing message
+      chatArea.removeChild(typingWrapper);
 
       if (!data.response) {
         throw new Error("No response in API result.");
@@ -167,6 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
       addMessage(data.response, "bot");
     } catch (error) {
       console.error("🚨 Chatbot error:", error);
+      if (chatArea.contains(typingWrapper)) {
+        chatArea.removeChild(typingWrapper);
+      }
       addMessage("Oops! The chatbot is currently unavailable.", "error");
     }
   });
@@ -177,6 +160,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+  
 
 //view full menu
 function toggleMenu() {

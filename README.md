@@ -21,7 +21,7 @@
   - toggle button 
   - Dark/Light mode 
   - ChatBot
-
+  
   Technologies Used 
   - HTML5
   - Tailwind CSS
@@ -29,3 +29,4 @@
   - Python
 
 🚀 Deployment link 🌐 - https://dopi95.github.io/Artisan-Blend/
+
