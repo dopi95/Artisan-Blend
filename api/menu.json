@@ -1,128 +1,123 @@
 {
   "starters": [
     {
-      "name": "Caprese Salad",
-      "price": "120 ETB",
+      "name": "Samosa",
+      "price": "150 KSH",
       "signature": true,
-      "dietary": ["vegetarian", "gluten-free", "nut-free"]
+      "dietary": ["vegetarian", "nut-free"]
     },
     {
-      "name": "Stuffed Mushrooms",
-      "price": "130 ETB",
+      "name": "Mandazi",
+      "price": "100 KSH",
       "signature": false,
       "dietary": ["vegetarian"]
     },
     {
-      "name": "Garlic Bread",
-      "price": "80 ETB",
+      "name": "Kachumbari Salad",
+      "price": "120 KSH",
       "signature": false,
-      "dietary": ["vegetarian", "nut-free"]
+      "dietary": ["vegan", "gluten-free", "nut-free"]
     }
   ],
   "main_courses": [
     {
-      "name": "Truffle Pasta",
-      "price": "350 ETB",
-      "signature": true,
-      "dietary": ["vegetarian", "nut-free"]
-    },
-    {
-      "name": "Margherita Pizza",
-      "price": "280 ETB",
-      "signature": true,
-      "dietary": ["vegetarian", "nut-free"]
-    },
-    {
-      "name": "Beef Lasagna",
-      "price": "340 ETB",
+      "name": "Nyama Choma with Ugali",
+      "price": "600 KSH",
       "signature": true,
       "dietary": ["nut-free"]
     },
     {
-      "name": "Grilled Chicken Parmigiana",
-      "price": "360 ETB",
+      "name": "Mukimo",
+      "price": "400 KSH",
+      "signature": false,
+      "dietary": ["vegetarian", "gluten-free"]
+    },
+    {
+      "name": "Pilau",
+      "price": "550 KSH",
+      "signature": true,
+      "dietary": ["nut-free"]
+    },
+    {
+      "name": "Fish Fry with Chapati",
+      "price": "650 KSH",
       "signature": false,
       "dietary": []
     }
   ],
   "special_diet": [
     {
-      "name": "Zucchini Noodles (Diabetic-Friendly)",
-      "price": "300 ETB",
+      "name": "Sukuma Wiki (Collard Greens)",
+      "price": "250 KSH",
       "signature": false,
-      "dietary": ["diabetic-friendly", "gluten-free"]
+      "dietary": ["vegan", "gluten-free", "diabetic-friendly"]
     },
     {
-      "name": "Quinoa & Avocado Bowl",
-      "price": "270 ETB",
+      "name": "Githeri (Bean and Maize Stew)",
+      "price": "300 KSH",
       "signature": false,
       "dietary": ["vegan", "gluten-free"]
     }
   ],
   "desserts": [
     {
-      "name": "Tiramisu",
-      "price": "180 ETB",
+      "name": "Mango Mousse",
+      "price": "200 KSH",
       "signature": true,
       "dietary": []
     },
     {
-      "name": "Gelato",
-      "price": "150 ETB",
+      "name": "Coconut Cake",
+      "price": "180 KSH",
       "signature": false,
       "dietary": ["gluten-free"]
     }
   ],
   "drinks": [
     {
-      "name": "House Wine (Red/White)",
-      "price": "150 ETB",
+      "name": "Chai (Kenyan Tea)",
+      "price": "80 KSH",
       "signature": true,
       "dietary": ["gluten-free"]
     },
     {
-      "name": "Espresso",
-      "price": "70 ETB",
+      "name": "Fresh Passion Juice",
+      "price": "120 KSH",
       "signature": false,
-      "dietary": []
+      "dietary": ["vegan", "gluten-free"]
     },
     {
-      "name": "Fresh Juice (Orange/Mango)",
-      "price": "100 ETB",
+      "name": "Mango Smoothie",
+      "price": "150 KSH",
       "signature": false,
       "dietary": ["vegan", "gluten-free"]
     }
   ],
   "signature": [
     {
-      "name": "Caprese Salad",
+      "name": "Samosa",
       "category": "starter",
-      "price": "120 ETB"
+      "price": "150 KSH"
     },
     {
-      "name": "Truffle Pasta",
+      "name": "Nyama Choma with Ugali",
       "category": "main_course",
-      "price": "350 ETB"
+      "price": "600 KSH"
     },
     {
-      "name": "Margherita Pizza",
+      "name": "Pilau",
       "category": "main_course",
-      "price": "280 ETB"
+      "price": "550 KSH"
     },
     {
-      "name": "Beef Lasagna",
-      "category": "main_course",
-      "price": "340 ETB"
-    },
-    {
-      "name": "Tiramisu",
+      "name": "Mango Mousse",
       "category": "dessert",
-      "price": "180 ETB"
+      "price": "200 KSH"
     },
     {
-      "name": "House Wine (Red/White)",
+      "name": "Chai (Kenyan Tea)",
       "category": "drink",
-      "price": "150 ETB"
+      "price": "80 KSH"
     }
   ]
 }
