@@ -112,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
     addMessage(userInput, "user");
     userInputField.value = "";
 
-    // Add "Bot is typing..." message
     const typingWrapper = document.createElement("div");
     typingWrapper.className = "flex justify-start";
     const typingBubble = document.createElement("div");
