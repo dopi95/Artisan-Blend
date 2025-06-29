@@ -77,36 +77,46 @@
         </div>
     </header>
     
-  <!-- Chatbot Section -->
-  <section class="max-w-xl mx-auto mt-32 mb-14 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700">
-    
-    <!-- Chat Area -->
-    <div id="chatArea" class="h-80 overflow-y-auto space-y-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-md text-base scroll-smooth">
-      <!-- Sample Prompt -->
-      
-    </div>
+  <!-- Add this in your <head> to use Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Chatbot Greeting -->
-    <p class="mt-4 text-gray-700 dark:text-gray-200 text-base flex items-center gap-2">
-      <span><strong>Chatbot:</strong> Hi! Ask any questions you have on our services below!</span>
-    </p>
+<!-- Modern Chatbot Section -->
+<section class="max-w-xl mx-auto mt-32 mb-14 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 shadow-2xl rounded-2xl border border-gray-300 dark:border-gray-700">
 
-    <!-- Input Area -->
-    <div class="mt-4 flex items-center gap-2">
-      <input
-        id="userInput"
-        type="text"
-        placeholder="Type your message..."
-        class="flex-1 px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <button
-        id="sendBtn"
-        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
-      >
-        Send
-      </button>
+  <!-- Chatbot Header -->
+  <div class="flex items-center gap-3 mb-6">
+    <div class="bg-blue-600 p-3 rounded-full">
+      <i class="fas fa-comments text-white text-xl"></i>
     </div>
-  </section>
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Chat with Us – <span class="text-blue-600">Artisan Blend</span></h2>
+  </div>
+
+  <!-- Chat Area -->
+  <div id="chatArea" class="h-80 overflow-y-auto space-y-4 p-4 bg-white dark:bg-gray-900 rounded-lg text-base border border-gray-200 dark:border-gray-700 shadow-inner">
+    <!-- Messages will appear here -->
+  </div>
+
+  <!-- Chatbot Greeting -->
+  <p class="mt-4 text-gray-700 dark:text-gray-300 text-base flex items-center gap-2">
+    <strong>Chatbot:</strong> 👋 Hi there! Feel free to ask us anything about our services.
+  </p>
+
+  <!-- Input Area -->
+  <div class="mt-4 flex items-center gap-2">
+    <input
+      id="userInput"
+      type="text"
+      placeholder="Type your message..."
+      class="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button
+      id="sendBtn"
+      class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
+    >
+      Send
+    </button>
+  </div>
+</section>
 
 
 <!-- Footer section -->
