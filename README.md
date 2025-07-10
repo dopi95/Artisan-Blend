@@ -28,5 +28,5 @@
   - JavaScript 
   - Python
 
-🚀 Deployment link 🌐 - https://dopi95.github.io/Artisan-Blend/
+🚀 Deployment link 🌐 - https://dopi95.github.io/ArtisanBlend-Restaurant-Website/
 
